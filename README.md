@@ -1,8 +1,9 @@
 # nested-loop
 draw triangle with loop
 
-/** Function **/
+#Function
 
+```
 public function ucgen($number){
         for($a=1; $a<=$number; $a++) {
             for($b=1; $b<=$a; $b++) {
@@ -11,17 +12,19 @@ public function ucgen($number){
             print "<br>";
         }
 }
+```
  
- /** Controller **/
- 
+ #Controller
+``` 
  public function DefaultController{
     $ucgen = $this->ucgen(15);
     return array ('ucgen' => ucgen);
  }
+ ```
  
- 
- /** View Twig **/
- 
+#View Twig
+ ```
  {% block body %}
     {{ dump(ucgen) }}
  {% endblock %}
+```
