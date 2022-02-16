@@ -7,7 +7,7 @@ draw triangle with loop
 public function ucgen($number){
         for($a=1; $a<=$number; $a++) {
             for($b=1; $b<=$a; $b++) {
-                print "0";
+                print "*";
             }
             print "<br>";
         }
@@ -17,7 +17,7 @@ public function ucgen($number){
  #Controller
 ``` 
  public function DefaultController{
-    $ucgen = $this->ucgen(15);
+    $ucgen = $this->ucgen(10);
     return array ('ucgen' => ucgen);
  }
  ```
@@ -27,4 +27,18 @@ public function ucgen($number){
  {% block body %}
     {{ dump(ucgen) }}
  {% endblock %}
+```
+
+#Output
+ ```
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
 ```
