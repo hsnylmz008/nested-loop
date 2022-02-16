@@ -3,7 +3,7 @@ draw triangle with loop
 
 #Function
 
-```
+```php
 public function ucgen($number){
         for($a=1; $a<=$number; $a++) {
             for($b=1; $b<=$a; $b++) {
@@ -15,7 +15,7 @@ public function ucgen($number){
 ```
  
  #Controller
-``` 
+``` php
  public function DefaultController{
     $ucgen = $this->ucgen(10);
     return array ('ucgen' => ucgen);
@@ -23,7 +23,7 @@ public function ucgen($number){
  ```
  
 #View Twig
- ```
+ ```twig
  {% block body %}
     {{ dump(ucgen) }}
  {% endblock %}
@@ -45,7 +45,7 @@ public function ucgen($number){
 
 
 
- #Controller
+ #Function
 ```php
 for($a=1; $a<=10; $a++) {
 	for($b=1; $b<=$a; $b++) {
